@@ -24,25 +24,53 @@ if (argv.length === 0) {
   console.log('usage, tell tell no');
 } else {
   argv.forEach(function (package) {
-    var dataFile = path.resolve(dataDir, package + '.json');
+
+    var tokens = package.split("@");
+    var name = tokens[0];
+
+    // only valid package names
+    if (tokens.length > 2) {
+      console.error('what socery is this, daug?');
+      return;
+    }
+
+    var dataFile = path.join(dataDir, name + '.json');
     if (fs.existsSync(dataFile)) {
       console.info('installing package', package);
       var meta = require(dataFile);
-      var versions = Object.keys(meta.versions).sort(semver.rcompare);
-      var latest = meta.versions[versions[0]];
+      var version = tokens[1];
+
+      var parsedVersion = version && semver.parse(version);
+      parsedVersion = parsedVersion && parsedVersion.splice(1,3).join('.');
+
+      // If no version is passed, fallback to the latest version
+      if (!version || version === 'latest' || !parsedVersion || !meta.versions[parsedVersion]) {
+        var versions = Object.keys(meta.versions).sort(semver.rcompare);
+        version = versions[0];
+      } else {
+        version = parsedVersion;
+      }
+
+      var latest = meta.versions[version];
       var md5 = latest.md5sum;
       var url = latest.src[0];
-      request(url, function (err, data, _md5) {
-        console.info(package, filesize(data.length, 2, false), (md5 === _md5));
-      });
+      var key = [name, version].join('@');
+      var cachePath = path.join(cacheDir, key);
+      if(fs.existsSync(cachePath)) {
+        // TODO: check md5 of the cache, if wrong, re-download
+      } else {
+        request(url, function (err, data, _md5) {
+          var size = filesize(data.length, 2, false);
+          if (md5 === _md5) {
+            console.info(key, size);
+            fs.writeFileSync(cachePath, data);
+          } else {
+            console.error('checksum failed');
+          }
+        });
+      }
     } else {
-      console.warn('bhaiya, mila naheen', package);
+      console.warn('bhaiya, mila naheen', name, dataFile);
     }
   });
 }
-
-// var url = 'http://documentcloud.github.io/backbone/backbone.js';
-//
-
-
-// console.log('nothing implemented yet');
