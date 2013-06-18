@@ -2,3 +2,5 @@
 
 var meta = require('../package.json');
 process.title = meta.name;
+
+console.log('nothing implemented yet');
