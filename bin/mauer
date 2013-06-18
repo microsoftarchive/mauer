@@ -8,6 +8,8 @@ require('colors');
 
 var fs = require('fs');
 var path = require('path');
+var crypto = require('crypto');
+
 var meta = require('../package.json');
 var request = require('../lib/request');
 
@@ -36,7 +38,6 @@ if (argv.length === 0) {
 
     var dataFile = path.join(dataDir, name + '.json');
     if (fs.existsSync(dataFile)) {
-      console.info('installing package', package);
       var meta = require(dataFile);
       var version = tokens[1];
 
@@ -56,16 +57,28 @@ if (argv.length === 0) {
       var url = latest.src[0];
       var key = [name, version].join('@');
       var cachePath = path.join(cacheDir, key);
-      if(fs.existsSync(cachePath)) {
+
+      console.info('installing package', key);
+      if(false && fs.existsSync(cachePath)) {
         // TODO: check md5 of the cache, if wrong, re-download
+        var data = fs.readFileSync(cachePath).toString();
+        var checksum = crypto.createHash('md5');
+        checksum.update(data);
+        var _md5 = checksum.digest('hex');
+        if (_md5 === md5) {
+          console.log('all okay');
+        } else {
+          console.error('invalid cache, re-downloading', _md5, md5, cachePath);
+        }
       } else {
-        request(url, function (err, data, _md5) {
-          var size = filesize(data.length, 2, false);
+        var stream = fs.createWriteStream(cachePath);
+        request(url, stream, function (err, _md5) {
+          var size = fs.statSync(cachePath).size;
+          size = filesize(size, 2, false);
           if (md5 === _md5) {
-            console.info(key, size);
-            fs.writeFileSync(cachePath, data);
+            console.info(key, '-', size);
           } else {
-            console.error('checksum failed');
+            console.error('checksum failed', key, md5, _md5);
           }
         });
       }
