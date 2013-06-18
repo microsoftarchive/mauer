@@ -1,0 +1,12 @@
+{
+  "name": "backbone",
+  "description": "Give your JS App some Backbone with Models, Views, Collections, and Events",
+  "versions": {
+    "1.0.0": {
+      "src": [
+        "http://documentcloud.github.io/backbone/backbone.js",
+        "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone.js"
+      ]
+    }
+  }
+}
