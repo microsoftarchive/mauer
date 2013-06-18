@@ -3,6 +3,7 @@
   "description": "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.",
   "versions": {
     "1.10.1": {
+      "md5sum": "bd42b401ab68f9eb54eee47a873b5769",
       "src": [
         "http://code.jquery.com/jquery-1.10.1.js",
         "http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js",
@@ -10,6 +11,7 @@
       ]
     },
     "2.0.2": {
+      "md5sum": "fb7f045585513b12c3694e83496c5a5d",
       "src": [
         "http://code.jquery.com/jquery-2.0.2.js",
         "http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.js",
