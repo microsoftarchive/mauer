@@ -1,0 +1,22 @@
+{
+  "author": "Aditya <aditya@netroy.in> (http://netroy.in/)",
+  "name": "mauer",
+  "version": "0.1.0",
+  "homepage": "http://netroy.github.io/mauer",
+  "description": "browser libs package manager",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/netroy/mauer.git"
+  },
+  "bin": "./bin/mauer",
+  "preferGlobal": true,
+  "engines": {
+    "node": "~0.10.10",
+    "npm": "~1.2.25"
+  },
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "dependencies": {
+    "semver": "~1.1.4"
+  }
+}

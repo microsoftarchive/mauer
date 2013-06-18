@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var meta = require('../package.json');
+process.title = meta.name;
