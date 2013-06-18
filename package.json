@@ -1,7 +1,7 @@
 {
   "author": "Aditya <aditya@netroy.in> (http://netroy.in/)",
   "name": "mauer",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "homepage": "http://netroy.github.io/mauer",
   "description": "browser libs package manager",
   "repository": {
