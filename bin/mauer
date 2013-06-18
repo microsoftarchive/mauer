@@ -1,6 +1,48 @@
 #!/usr/bin/env node
 
+var mkdirp = require('mkdirp');
+var async = require('async');
+var semver = require('semver');
+var filesize = require('filesize');
+require('colors');
+
+var fs = require('fs');
+var path = require('path');
 var meta = require('../package.json');
+var request = require('../lib/request');
+
 process.title = meta.name;
 
-console.log('nothing implemented yet');
+var dataDir = path.resolve(__dirname, '../data');
+var cacheDir = path.resolve((process.env.HOME || '/tmp/'), '.mauer/cache');
+mkdirp.sync(cacheDir);
+
+var argv = process.argv;
+argv.splice(0, 2);
+if (argv.length === 0) {
+  // TODO: parse dependencies from component.json
+  console.log('usage, tell tell no');
+} else {
+  argv.forEach(function (package) {
+    var dataFile = path.resolve(dataDir, package + '.json');
+    if (fs.existsSync(dataFile)) {
+      console.info('installing package', package);
+      var meta = require(dataFile);
+      var versions = Object.keys(meta.versions).sort(semver.rcompare);
+      var latest = meta.versions[versions[0]];
+      var md5 = latest.md5sum;
+      var url = latest.src[0];
+      request(url, function (err, data, _md5) {
+        console.info(package, filesize(data.length, 2, false), (md5 === _md5));
+      });
+    } else {
+      console.warn('bhaiya, mila naheen', package);
+    }
+  });
+}
+
+// var url = 'http://documentcloud.github.io/backbone/backbone.js';
+//
+
+
+// console.log('nothing implemented yet');

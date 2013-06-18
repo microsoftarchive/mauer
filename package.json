@@ -17,6 +17,10 @@
   "license": "MIT",
   "readmeFilename": "Readme.md",
   "dependencies": {
-    "semver": "~1.1.4"
+    "semver": "~1.1.4",
+    "mkdirp": "~0.3.5",
+    "async": "~0.2.9",
+    "colors": "~0.6.0-1",
+    "filesize": "~1.9.5"
   }
 }
