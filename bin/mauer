@@ -1,89 +1,30 @@
 #!/usr/bin/env node
 
-var mkdirp = require('mkdirp');
-var async = require('async');
-var semver = require('semver');
-var filesize = require('filesize');
-require('colors');
+var logger = require('npmlog');
 
-var fs = require('fs');
-var path = require('path');
-var crypto = require('crypto');
+// load command modules
+var commands = ['install', 'diff', 'usage'];
+var cmdMap = {};
+commands.forEach(function (name) {
+  var command = require('../lib/commands/' + name);
+  cmdMap[name] = cmdMap[name[0]] = command;
+});
 
-var meta = require('../package.json');
-var request = require('../lib/request');
+// set the process title to the package name
+process.title = require('../package.json').name;
 
-process.title = meta.name;
-
-var dataDir = path.resolve(__dirname, '../data');
-var cacheDir = path.resolve((process.env.HOME || '/tmp/'), '.mauer/cache');
-mkdirp.sync(cacheDir);
-
+// parse args
 var argv = process.argv;
 argv.splice(0, 2);
+
 if (argv.length === 0) {
-  // TODO: parse dependencies from component.json
+  // TODO: parse dependencies from mauer.json
   console.log('usage, tell tell no');
 } else {
-  argv.forEach(function (package) {
-
-    var tokens = package.split("@");
-    var name = tokens[0];
-
-    // only valid package names
-    if (tokens.length > 2) {
-      console.error('what socery is this, daug?');
-      return;
-    }
-
-    var dataFile = path.join(dataDir, name + '.json');
-    if (fs.existsSync(dataFile)) {
-      var meta = require(dataFile);
-      var version = tokens[1];
-
-      var parsedVersion = version && semver.parse(version);
-      parsedVersion = parsedVersion && parsedVersion.splice(1,3).join('.');
-
-      // If no version is passed, fallback to the latest version
-      if (!version || version === 'latest' || !parsedVersion || !meta.versions[parsedVersion]) {
-        var versions = Object.keys(meta.versions).sort(semver.rcompare);
-        version = versions[0];
-      } else {
-        version = parsedVersion;
-      }
-
-      var latest = meta.versions[version];
-      var md5 = latest.md5sum;
-      var url = latest.src[0];
-      var key = [name, version].join('@');
-      var cachePath = path.join(cacheDir, key);
-
-      console.info('installing package', key);
-      if(false && fs.existsSync(cachePath)) {
-        // TODO: check md5 of the cache, if wrong, re-download
-        var data = fs.readFileSync(cachePath).toString();
-        var checksum = crypto.createHash('md5');
-        checksum.update(data);
-        var _md5 = checksum.digest('hex');
-        if (_md5 === md5) {
-          console.log('all okay');
-        } else {
-          console.error('invalid cache, re-downloading', _md5, md5, cachePath);
-        }
-      } else {
-        var stream = fs.createWriteStream(cachePath);
-        request(url, stream, function (err, _md5) {
-          var size = fs.statSync(cachePath).size;
-          size = filesize(size, 2, false);
-          if (md5 === _md5) {
-            console.info(key, '-', size);
-          } else {
-            console.error('checksum failed', key, md5, _md5);
-          }
-        });
-      }
-    } else {
-      console.warn('bhaiya, mila naheen', name, dataFile);
-    }
-  });
+  var command = argv.shift();
+  if (typeof cmdMap[command] === 'function') {
+    cmdMap[command].apply(null, argv);
+  } else {
+    logger.error('', 'unsupported command "%s"', command);
+  }
 }
