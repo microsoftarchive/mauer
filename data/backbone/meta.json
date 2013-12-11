@@ -1,0 +1,9 @@
+{
+  "name": "backbone",
+  "description": "Give your JS App some Backbone with Models, Views, Collections, and Events",
+  "versions": [
+    "0.9.10",
+    "1.0.0",
+    "1.1.0"
+  ]
+}
