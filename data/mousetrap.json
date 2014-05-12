@@ -1,0 +1,11 @@
+{
+  "name": "mousetrap",
+  "versions": {
+    "1.1.2": {
+      "urls": [
+        "https://raw.githubusercontent.com/ccampbell/mousetrap/1.1.2/mousetrap.js"
+      ],
+      "md5sum": "b05523c95020d4d7212e0fa244e919b5"
+    }
+  }
+}

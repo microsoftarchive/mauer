@@ -1,0 +1,12 @@
+{
+  "name": "x-tag.core",
+  "description": "Custom Elements for Modern Browsers",
+  "versions": {
+    "0.9.5": {
+      "urls": [
+        "https://raw.githubusercontent.com/x-tag/core/0.9.5/dist/x-tag-core.js"
+      ],
+      "md5sum": "cabfd5c059c3539950d04491bc9ee7bb"
+    }
+  }
+}

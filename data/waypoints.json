@@ -1,0 +1,23 @@
+{
+  "versions": {
+    "1.1.6": {
+      "urls": [
+        "https://raw.githubusercontent.com/imakewebthings/jquery-waypoints/v1.1.6/waypoints.js"
+      ],
+      "md5sum": "663b35efbd71a721c722fe742e5f80b6"
+    },
+    "1.1.7": {
+      "urls": [
+        "https://raw.githubusercontent.com/imakewebthings/jquery-waypoints/v1.1.7/waypoints.js",
+        "https://raw.githubusercontent.com/imakewebthings/jquery-waypoints/1.1/waypoints.js"
+      ],
+      "md5sum": "6549f703417eb9967fc05c5532ea8423"
+    },
+    "2.0.4": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.js"
+      ],
+      "md5sum": "f302b99ffb6e3606e9eb7ca7d82a0264"
+    }
+  }
+}

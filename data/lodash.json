@@ -1,0 +1,26 @@
+{
+  "name": "lodash",
+  "description": "A low-level utility library delivering consistency, customization, performance, and extra features.",
+  "versions": {
+    "1.3.0": {
+      "urls": [
+        "http://cdnjs.cloudflare.com/ajax/libs/lodash.js/1.3.0/lodash.js",
+        "https://raw.githubusercontent.com/lodash/lodash/1.3.0/dist/lodash.js"
+      ],
+      "md5sum": "41dd9c7e4ba3e48671b8a2a781b843a4"
+    },
+    "1.3.1": {
+      "urls": [
+        "https://raw.githubusercontent.com/lodash/lodash/1.3.1/dist/lodash.js",
+        "http://cdnjs.cloudflare.com/ajax/libs/lodash.js/1.3.1/lodash.js"
+      ],
+      "md5sum": "96a2b2f18e5253c5c655807107f78e1a"
+    },
+    "2.4.1": {
+      "urls": [
+        "https://raw.githubusercontent.com/lodash/lodash/2.4.1/dist/lodash.js"
+      ],
+      "md5sum": "06d28202bf48e22a9d90673c8498c0d5"
+    }
+  }
+}

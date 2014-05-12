@@ -1,0 +1,19 @@
+{
+  "name": "moment",
+  "versions": {
+    "1.7.2": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.js",
+        "https://raw.githubusercontent.com/moment/moment/1.7.2/moment.js"
+      ],
+      "md5sum": "47295bc98759ecf0c049cb5c26ff0d30"
+    },
+    "2.4.0": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.js",
+        "https://raw.githubusercontent.com/moment/moment/1.7.2/moment.js"
+      ],
+      "md5sum": "47295bc98759ecf0c049cb5c26ff0d30"
+    }
+  }
+}

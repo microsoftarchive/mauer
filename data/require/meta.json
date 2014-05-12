@@ -1,9 +1,0 @@
-{
-  "name": "require",
-  "description": "A JavaScript file and module loader.",
-  "versions": [
-    "2.1.5",
-    "2.1.9",
-    "2.1.11"
-  ]
-}

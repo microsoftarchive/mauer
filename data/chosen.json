@@ -1,0 +1,12 @@
+{
+  "name": "chosen",
+  "versions": {
+    "0.9.12": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/chosen/0.9.12/chosen.jquery.js",
+        "https://github.com/harvesthq/chosen/blob/v0.9.12/chosen/chosen.jquery.js"
+      ],
+      "md5sum": "364ff7797710fd6dafcc6071b1c070dd"
+    }
+  }
+}

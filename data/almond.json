@@ -1,0 +1,17 @@
+{
+  "name": "almond",
+  "versions": {
+    "0.2.7": {
+      "urls": [
+        "https://raw.githubusercontent.com/jrburke/almond/0.2.7/almond.js"
+      ],
+      "md5sum": "125646f0eb72ef57bac69c46ee961ad7"
+    },
+    "0.2.9": {
+      "urls": [
+        "https://raw.githubusercontent.com/jrburke/almond/0.2.9/almond.js"
+      ],
+      "md5sum": "464474de9aea6c30ac8a9491aa1c45b4"
+    }
+  }
+}

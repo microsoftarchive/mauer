@@ -1,0 +1,11 @@
+{
+  "name": "wunderbits.core",
+  "versions": {
+    "0.0.0": {
+      "urls": [
+        "https://raw.githubusercontent.com/wunderlist/wunderbits.core/0.0.0/dist/wunderbits.core.amd.min.js"
+      ],
+      "md5sum": "857aa522f2ad625526528d73ee7e08ac"
+    }
+  }
+}

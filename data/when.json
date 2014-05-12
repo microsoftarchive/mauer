@@ -1,0 +1,19 @@
+{
+  "name": "when",
+  "description": "A solid, fast Promises/A+ and when() implementation",
+  "versions": {
+    "2.7.1": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/when/2.7.1/when.js",
+        "https://raw.githubusercontent.com/cujojs/when/2.7.1/when.js"
+      ],
+      "md5sum": "156839f99dae1f06448d1f840d9b97d8"
+    },
+    "2.8.0": {
+      "urls": [
+        "https://raw.githubusercontent.com/cujojs/when/2.8.0/when.js"
+      ],
+      "md5sum": "ed71e845cdcbee9f62d34b732e6f8056"
+    }
+  }
+}

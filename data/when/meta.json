@@ -1,8 +1,0 @@
-{
-  "name": "when",
-  "description": "A solid, fast Promises/A+ and when() implementation",
-  "versions": [
-    "2.7.1",
-    "2.8.0"
-  ]
-}

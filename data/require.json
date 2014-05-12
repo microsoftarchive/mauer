@@ -1,0 +1,30 @@
+{
+  "name": "require",
+  "description": "A JavaScript file and module loader.",
+  "versions": {
+    "2.1.5": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.js",
+        "http://requirejs.org/docs/release/2.1.5/comments/require.js",
+        "https://raw.githubusercontent.com/jrburke/requirejs/2.1.5/require.js"
+      ],
+      "md5sum": "2b3bbe10644da6d8fcf8cfa40def64ea"
+    },
+    "2.1.9": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.js",
+        "http://requirejs.org/docs/release/2.1.9/comments/require.js",
+        "https://raw.githubusercontent.com/jrburke/requirejs/2.1.9/require.js"
+      ],
+      "md5sum": "d4f49e01ac3d014266e673ad09aefa80"
+    },
+    "2.1.11": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.js",
+        "http://requirejs.org/docs/release/2.1.11/comments/require.js",
+        "https://raw.githubusercontent.com/jrburke/requirejs/2.1.11/require.js"
+      ],
+      "md5sum": "e1484b205fdeccebe61a787fb342cba4"
+    }
+  }
+}

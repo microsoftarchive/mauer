@@ -1,0 +1,10 @@
+{
+  "versions": {
+    "1.0.1": {
+      "urls": [
+        "https://raw.githubusercontent.com/NobleJS/setImmediate/1.0.1/setImmediate.js"
+      ],
+      "md5sum": "e59609c90376cf72b1f4f659be0a5c99"
+    }
+  }
+}
