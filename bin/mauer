@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var logger = require('npmlog');
+logger.level = process.env.LOG_LEVEL || 'warn';
 
 // load command modules
 var commands = ['install', 'diff', 'usage'];
