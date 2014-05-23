@@ -1,0 +1,11 @@
+0.2.7:
+  checksum:
+    md5: 125646f0eb72ef57bac69c46ee961ad7
+  urls:
+    - https://raw.githubusercontent.com/jrburke/almond/0.2.7/almond.js
+
+0.2.9:
+  checksum:
+    md5: 464474de9aea6c30ac8a9491aa1c45b4
+  urls:
+    - https://raw.githubusercontent.com/jrburke/almond/0.2.9/almond.js
