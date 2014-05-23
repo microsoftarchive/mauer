@@ -18,14 +18,9 @@ process.title = require('../package.json').name;
 var argv = process.argv;
 argv.splice(0, 2);
 
-if (argv.length === 0) {
-  // TODO: parse dependencies from mauer.json
-  console.log('usage, tell tell no');
+var command = (argv.length === 0) ? 'install' : argv.shift();
+if (typeof cmdMap[command] === 'function') {
+  cmdMap[command].apply(null, argv);
 } else {
-  var command = argv.shift();
-  if (typeof cmdMap[command] === 'function') {
-    cmdMap[command].apply(null, argv);
-  } else {
-    logger.error('', 'unsupported command "%s"', command);
-  }
+  logger.error('', 'unsupported command "%s"', command);
 }
