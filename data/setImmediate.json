@@ -5,6 +5,12 @@
         "https://raw.githubusercontent.com/NobleJS/setImmediate/1.0.1/setImmediate.js"
       ],
       "md5sum": "e59609c90376cf72b1f4f659be0a5c99"
+    },
+    "1.0.2": {
+      "urls": [
+        "https://raw.githubusercontent.com/YuzuJS/setImmediate/1.0.2/setImmediate.js"
+      ],
+      "md5sum": "f49148a602fb0d608dbee312c57176a4"
     }
   }
 }

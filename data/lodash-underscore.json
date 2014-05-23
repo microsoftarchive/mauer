@@ -1,0 +1,11 @@
+{
+  "name": "lodash-underscore",
+  "versions": {
+    "2.4.1": {
+      "urls": [
+        "https://raw.githubusercontent.com/lodash/lodash/2.4.1/dist/lodash.underscore.js"
+      ],
+      "md5sum": "ea3b15675a67650b09ddd7f0d2ccedfb"
+    }
+  }
+}
