@@ -25,8 +25,7 @@
     },
     "1.1.2": {
       "urls": [
-        "https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js",
-        "https://raw.githubusercontent.com/jashkenas/backbone/1.1.2/backbone.js"
+        "https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js"
       ],
       "md5sum": "dc7c45f6520733aef5bc67c57af78b01"
     }
