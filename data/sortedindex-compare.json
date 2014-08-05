@@ -1,0 +1,12 @@
+{
+  "name": "sortedindex-compare",
+  "description": "A fork of underscore/lodash.sortedIndex to use a comparison function instead of a ranking function.",
+  "versions": {
+    "0.0.1": {
+      "urls": [
+        "https://raw.githubusercontent.com/6wunderkinder/sortedindex-compare/b141cdd38cab8d09d2b711267510112f58cf2dfd/index.js"
+      ],
+      "md5sum": "3a79f93140a90f95a874a61ca6da2af7"
+    }
+  }
+}
