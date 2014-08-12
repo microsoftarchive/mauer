@@ -1,0 +1,12 @@
+{
+  "name": "bugsnag",
+  "versions": {
+    "2.3.6": {
+      "urls": [
+        "https://d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.3.6.js",
+        "https://raw.githubusercontent.com/bugsnag/bugsnag-js/v2.3.6/src/bugsnag.js"
+      ],
+      "md5sum": "d4a47e5ac77f82b0e6610be34c155370"
+    }
+  }
+}
