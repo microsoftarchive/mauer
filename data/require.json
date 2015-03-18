@@ -25,6 +25,14 @@
         "https://raw.githubusercontent.com/jrburke/requirejs/2.1.11/require.js"
       ],
       "md5sum": "e1484b205fdeccebe61a787fb342cba4"
+    },
+    "2.1.16": {
+      "urls": [
+        "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.js",
+        "http://requirejs.org/docs/release/2.1.16/comments/require.js",
+        "https://raw.githubusercontent.com/jrburke/requirejs/2.1.16/require.js"
+      ],
+      "md5sum": "4805364156371be297aa5ab7f8b204cb"
     }
   }
 }
