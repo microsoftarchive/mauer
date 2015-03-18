@@ -25,6 +25,22 @@
         "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"
       ],
       "md5sum": "3177091fb9705dd978689ba11bf0609a"
+    },
+    "2.1.1": {
+      "urls": [
+        "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js",
+        "http://code.jquery.com/jquery-2.1.1.js",
+        "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"
+      ],
+      "md5sum": "7403060950f4a13be3b3dfde0490ee05"
+    },
+    "2.1.3": {
+      "urls": [
+        "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js",
+        "http://code.jquery.com/jquery-2.1.3.js",
+        "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"
+      ],
+      "md5sum": "cf26f8f0ccb06be71e92d8db0fb64ab5"
     }
   }
 }
