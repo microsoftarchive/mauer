@@ -12,6 +12,12 @@
         "https://d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.4.6.js"
       ],
       "md5sum": "c4d95526dbcf1130c80e125ad694fb1d"
+    },
+    "2.4.8": {
+      "urls": [
+        "https://d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.4.8.js"
+      ],
+      "md5sum": "8686dffd0d28b975970b2131959e0bdb"
     }
   }
 }
