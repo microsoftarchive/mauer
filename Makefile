@@ -8,17 +8,17 @@ WATCH =
 all: lint test
 
 lint:
-  @$(LINT) lib/
+	@$(LINT) lib/
 
 test:
-  @$(BIN) --ui $(UI) --reporter $(REPORTER) $(WATCH) $(TESTS)
+	@$(BIN) --ui $(UI) --reporter $(REPORTER) $(WATCH) $(TESTS)
 
 watch:
-  @$(MAKE) test REPORTER=spec WATCH=--watch
+	@$(MAKE) test REPORTER=spec WATCH=--watch
 
 coverage:
-  @jscoverage --no-highlight lib lib-cov
-  @TEST_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
-  @rm -rf lib-cov
+	@jscoverage --no-highlight lib lib-cov
+	@TEST_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
+	@rm -rf lib-cov
 
 .PHONY: test coverage
